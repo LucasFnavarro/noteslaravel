@@ -10,7 +10,7 @@ use function PHPSTORM_META\map;
 
 class AuthController extends Controller
 {
-    // Retorna a página de login front-end
+    // Retorna a página de login pra rota 
     public function index()
     {
         return view('login');
@@ -78,6 +78,8 @@ class AuthController extends Controller
     // Regra de negócio do logout.
     public function logout()
     {
+        // Remove os dados do usuário na sessão 
+        // e redireciona para pag. login
         session()->forget('user');
         return redirect()->to('/login');
     }
