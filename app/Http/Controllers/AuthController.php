@@ -78,6 +78,8 @@ class AuthController extends Controller
     // Regra de negócio do logout.
     public function logout()
     {
+        // Remove os dados do usuário na sessão 
+        // e redireciona para pag. login
         session()->forget('user');
         return redirect()->to('/login');
     }
