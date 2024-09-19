@@ -10,7 +10,7 @@ use function PHPSTORM_META\map;
 
 class AuthController extends Controller
 {
-    // Retorna a página de login front-end
+    // Retorna a página de login pra rota 
     public function index()
     {
         return view('login');
