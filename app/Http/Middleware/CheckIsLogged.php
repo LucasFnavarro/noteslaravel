@@ -15,6 +15,8 @@ class CheckIsLogged
      */
     public function handle(Request $request, Closure $next): Response
     {
+        // Middleware para forçar o usuário a voltar para o login
+        // Caso o mesmo não esteja logado na sessão.
         if(!session('user')){
             return redirect('/login');
         }

@@ -37,13 +37,13 @@
                                     <button type="submit" class="btn btn-secondary w-100">LOGIN</button>
                                 </div>
                             </form>
-
-                            {{-- Invalid login
+                                {{-- Apresentar o erro de login ou senha incorretos. --}}
                             @if (session('loginError'))
                                 <div class="alert alert-danger text-center">
                                     {{ session('loginError') }}
                                 </div>
-                            @endif --}}
+                            @endif
+
 
                         </div>
                     </div>
