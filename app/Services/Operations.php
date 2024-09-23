@@ -14,6 +14,7 @@ class Operations
         } catch (DecryptException $e) {
             return redirect()->route('home');
         }
+        
         return $value;
     }
 }
